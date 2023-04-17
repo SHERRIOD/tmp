@@ -1,0 +1,9 @@
+int         LoadFromFile();
+int         LoadUser();
+int         LoadCustomerRec();
+int         LoadStock();
+int         LoadInStockRec();
+int         LoadOutStockRec();
+int         LoadSalesRec();
+int         LoadReturnRec();
+int         LoadExchRec();

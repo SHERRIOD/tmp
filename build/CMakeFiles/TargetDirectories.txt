@@ -1,0 +1,3 @@
+/Users/sherriodscott/Desktop/demo/build/CMakeFiles/demo.dir
+/Users/sherriodscott/Desktop/demo/build/CMakeFiles/edit_cache.dir
+/Users/sherriodscott/Desktop/demo/build/CMakeFiles/rebuild_cache.dir
