@@ -20,6 +20,11 @@
 #define OUTPUT(str) printf("%s\n", str)
 
 #define INITLIST(list_pointer, Type) InitList(list_pointer, sizeof(Type))
+#define APPENDNODE(list_pointer, Type)\
+    {\
+        Type tmp;\
+        AppendNode(list_pointer, ADDR(tmp));\
+    }\
 
 #define ADDR(x) &x
 #define READFILE(path, list_pointer, Type, error)                   \
@@ -33,6 +38,18 @@
         Type type;                                              \
         TEST(WriteFile(path, list_pointer, ADDR(type)), error)  \
     }                                                               \
+
+#define SIGNUP(input, size, val_name, mode)\
+    char val_name[size];\
+    while(1){\
+        printf("请输入您的");\
+        printf(input);\
+        printf(":");\
+        if(SecuCtrl(val_name, size, mode) < 0){\
+            OUTPUT("非法输入，请重试");\
+        }\
+        else break;\
+    }\
 
 // 这些是链表的声明
 extern List list_customer;

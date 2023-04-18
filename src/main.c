@@ -29,6 +29,7 @@ main() {
     Func_ptr func1[] = {LoginIF, SignUpIF, ExitIF};
     SelectOption(func_name1, func1, 3);
 
+    ExitIF();
     // OUTPUT("欢迎进入本系统");
 
     // char* func_name2[] = {"退出", "系统设置", "f2", "f3", "f4"};
