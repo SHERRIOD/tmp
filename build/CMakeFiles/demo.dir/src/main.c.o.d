@@ -36,9 +36,9 @@ CMakeFiles/demo.dir/src/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_common.h \
   /Users/sherriodscott/Desktop/demo/include/file.h \
-  /Users/sherriodscott/Desktop/demo/include/debug.h \
-  /Users/sherriodscott/Desktop/demo/include/sys.h \
   /Users/sherriodscott/Desktop/demo/include/list.h \
+  /Users/sherriodscott/Desktop/demo/include/def.h \
+  /Users/sherriodscott/Desktop/demo/include/sys.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/wait.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_pid_t.h \

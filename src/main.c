@@ -1,24 +1,22 @@
 #include "interface.h"
 #include "file.h"
-#include "debug.h"
+#include "def.h"
 #include "sys.h"
 #include "list.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
+List list_customer;
 
-static List list_customer_rec;
+List list_goods;
 
-static List list_stock;
-static List list_in_stock_rec;
-static List list_out_stock_rec;
+List list_inventory;
 
-static List list_sales_rec;
-static List list_return_rec;
-static List list_exch_rec;
+List list_sales_rec;
+List list_return_rec;
 
-static List list_users;
+List list_users;
 
 void 
 Exit()

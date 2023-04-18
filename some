@@ -1,9 +1,10 @@
-int         LoadFromFile();
-int         LoadUser();
-int         LoadCustomerRec();
-int         LoadStock();
-int         LoadInStockRec();
-int         LoadOutStockRec();
-int         LoadSalesRec();
-int         LoadReturnRec();
-int         LoadExchRec();
+List list_customer_rec;
+
+List list_goods;
+
+List list_inventory;
+
+List list_sales_rec;
+List list_return_rec;
+
+List list_users;

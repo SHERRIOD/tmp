@@ -1,26 +1,14 @@
+#include "list.h"
+
 #ifndef FILE_H
 #define FILE_H
 
+int         ReadFile(const char* file_path, List* list,
+                                            void* list_type_value);
+int         WriteFile(const char* file_path, List* list, 
+                                            void* list_type_value);
+
 int         LoadFromFile();
-
-int         LoadUser();
-int         LoadCustomerRec();
-int         LoadStock();
-int         LoadInStockRec();
-int         LoadOutStockRec();
-int         LoadSalesRec();
-int         LoadReturnRec();
-int         LoadExchRec();
-
 int         WriteToFile();
-
-int         WriteUser();
-int         WriteCustomerRec();
-int         WriteStock();
-int         WriteInStockRec();
-int         WriteOutStockRec();
-int         WriteSalesRec();
-int         WriteReturnRec();
-int         WriteExchRec();
 
 #endif

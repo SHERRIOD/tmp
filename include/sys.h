@@ -6,6 +6,7 @@ int         ExitSys();
 
 void        Login();
 void        SignUp();
+
 void        SysSetting();
 
 #endif

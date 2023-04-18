@@ -1,5 +1,5 @@
 #include "interface.h"
-#include "debug.h"
+#include "def.h"
 
 int
 __SelectOption(char* func_name[], Func_ptr func_options[], int func_count)
@@ -20,6 +20,7 @@ __SelectOption(char* func_name[], Func_ptr func_options[], int func_count)
     else 
         return -1;
 }
+
 void SelectOption(char* func_name[], Func_ptr func_options[], int func_count) {
     while(1){
         if(__SelectOption(func_name, func_options, func_count) < 0){

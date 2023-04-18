@@ -7,7 +7,7 @@
 typedef void (*Func_ptr)(void);
 
 
-void SelectOption(char* func_name[], Func_ptr func_options[], int func_count);
+void        SelectOption(char* func_name[], Func_ptr func_options[], int func_count);
 
 #endif
 

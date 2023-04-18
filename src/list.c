@@ -5,14 +5,16 @@
 #include <string.h>
 
 // 链表初始化
-void InitList(List *list, size_t element_size) 
+void
+InitList(List *list, size_t element_size) 
 {
     list->head = NULL;
     list->element_size = element_size;
 }
 
 // 添加节点到链表尾部
-void AppendNode(List *list, void *value)
+void
+AppendNode(List *list, void *value)
 {
     Node* new_node = (Node*)malloc(sizeof(Node));
     new_node->data = malloc(list->element_size);
@@ -20,7 +22,8 @@ void AppendNode(List *list, void *value)
     new_node->next = NULL;
     if (list->head == NULL) {
         list->head = new_node;
-    } else {
+    } 
+    else {
         Node* tail = list->head;
         while (tail->next != NULL) {
             tail = tail->next;
@@ -30,7 +33,8 @@ void AppendNode(List *list, void *value)
 }
 
 // 添加节点到链表头部
-void PrependNode(List *list, void *value) 
+void
+PrependNode(List *list, void *value) 
 {
     Node *new_node = (Node*)malloc(sizeof(Node));
     new_node->data = malloc(list->element_size);
@@ -40,7 +44,8 @@ void PrependNode(List *list, void *value)
 }
 
 // 删除链表中第一个值为value的节点
-void RemoveNode(List* list, void* value, int (*compare)(const void*, const void*)) 
+void
+RemoveNode(List* list, void* value, int (*compare)(const void*, const void*)) 
 {
     if (list->head == NULL) {
         return;
@@ -64,7 +69,8 @@ void RemoveNode(List* list, void* value, int (*compare)(const void*, const void*
 }
 
 // 查找链表中第一个值为value的节点
-Node* FindNode(List *list, void *value, int (*compare)(const void*, const void*)) 
+Node* 
+FindNode(List *list, void *value, int (*compare)(const void*, const void*)) 
 {
     Node *current = list->head;
     while (current != NULL) {
@@ -77,7 +83,8 @@ Node* FindNode(List *list, void *value, int (*compare)(const void*, const void*)
 }
 
 // 释放链表内存
-void FreeList(List *list)
+void
+FreeList(List *list)
 {
     Node *current = list->head;
     Node *next = NULL;
@@ -91,7 +98,8 @@ void FreeList(List *list)
 }
 
 // 打印链表
-void PrintList(List *list, void (*print)(const void*))
+void
+PrintList(List *list, void (*print)(const void*))
 {
     Node* current = list->head;
     while (current != NULL) {

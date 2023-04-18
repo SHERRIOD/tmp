@@ -1,7 +1,8 @@
 CMakeFiles/demo.dir/src/sys.c.o: \
   /Users/sherriodscott/Desktop/demo/src/sys.c \
   /Users/sherriodscott/Desktop/demo/include/sys.h \
-  /Users/sherriodscott/Desktop/demo/include/debug.h \
+  /Users/sherriodscott/Desktop/demo/include/file.h \
+  /Users/sherriodscott/Desktop/demo/include/list.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/cdefs.h \
@@ -36,4 +37,4 @@ CMakeFiles/demo.dir/src/sys.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_ssize_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/secure/_common.h \
-  /Users/sherriodscott/Desktop/demo/include/file.h
+  /Users/sherriodscott/Desktop/demo/include/def.h
