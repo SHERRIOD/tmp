@@ -225,6 +225,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/security.o: src/security.c.o
+.PHONY : src/security.o
+
+# target to build an object file
+src/security.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/security.c.o
+.PHONY : src/security.c.o
+
+src/security.i: src/security.c.i
+.PHONY : src/security.i
+
+# target to preprocess a source file
+src/security.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/security.c.i
+.PHONY : src/security.c.i
+
+src/security.s: src/security.c.s
+.PHONY : src/security.s
+
+# target to generate assembly for a file
+src/security.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/src/security.c.s
+.PHONY : src/security.c.s
+
 src/sys.o: src/sys.c.o
 .PHONY : src/sys.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/security.o"
+	@echo "... src/security.i"
+	@echo "... src/security.s"
 	@echo "... src/sys.o"
 	@echo "... src/sys.i"
 	@echo "... src/sys.s"

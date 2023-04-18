@@ -89,6 +89,8 @@ LoginIF()
 void
 InitIF()
 {
+    WHERE("InitIF");
+
     if(InitSys() < 0){
         ERROR("系统未正常启动，请联系维护人员");
         exit(-1);
@@ -103,6 +105,12 @@ void
 SignUpIF()
 {
     WHERE("SignUpIF");
+
+    OUTPUT("请按以下流程注册");
+
+    OUTPUT("请输入您的用户名:");
+    
+
 }
 
 // 接口：系统设置

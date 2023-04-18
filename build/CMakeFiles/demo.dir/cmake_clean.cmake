@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo.dir/src/list.c.o.d"
   "CMakeFiles/demo.dir/src/main.c.o"
   "CMakeFiles/demo.dir/src/main.c.o.d"
+  "CMakeFiles/demo.dir/src/security.c.o"
+  "CMakeFiles/demo.dir/src/security.c.o.d"
   "CMakeFiles/demo.dir/src/sys.c.o"
   "CMakeFiles/demo.dir/src/sys.c.o.d"
   "demo"

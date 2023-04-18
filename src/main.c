@@ -18,6 +18,7 @@ List list_return_rec;
 
 List list_users;
 
+int user_permission = 0;
 
 int 
 main() {

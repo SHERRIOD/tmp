@@ -4,10 +4,16 @@
 #ifndef DEF_H
 #define DEF_H
 
+// 这些是常量的宏
 #define PNSZ 11
 #define ADSZ 225
-#define NMSZ 225
+#define NMSZ 20
+#define MOSZ 225
+#define TPSZ 50
+#define CDSZ 20
+#define OPTIONSZ 10
 
+// 这些是为实现代码复用和简化操作的宏
 #define WHERE(str) printf("Log: in %s\n", str) // for debug
 #define ERROR(str) printf("Error: %s\n", str)
 #define TEST(num, str) if(num < 0){ ERROR(str); return -1; }
@@ -28,6 +34,7 @@
         TEST(WriteFile(path, list_pointer, ADDR(type)), error)  \
     }                                                               \
 
+// 这些是链表的声明
 extern List list_customer;
 extern List list_goods;
 extern List list_inventory;
@@ -35,11 +42,13 @@ extern List list_sales_rec;
 extern List list_return_rec;
 extern List list_users;
 
-// 定义用户结构体，包含用户名和权限等级
+// 这些是结构体类型的定义
 typedef struct {
     char user_name[NMSZ];
+    char security_code[CDSZ];
     int permission;
-} User;
+
+} User;                         // 用户
 
 typedef struct {
 	char name[NMSZ];            // 姓名
@@ -52,8 +61,8 @@ typedef struct {
 } Customer;                     // 客户信息
 
 typedef struct {
-	char type[225];             // 品类
-	char taste[225];            // 口味
+	char type[TPSZ];             // 品类
+	char taste[TPSZ];            // 口味
 	int size;                   // 容量 
 	int package;                // 包装
 	double price;               // 售价
@@ -89,7 +98,7 @@ typedef struct {
     int flag_ret_or_ex;        // 0表示退货，1表示换货（同类型），如果受损不退换就打八折退差价，
                                 // 退货库存增加，换货库存不变（都只能换同类型的）
 	int num;                    // 数量
-	char momo[225];             // 备注
+	char momo[MOSZ];             // 备注
 
 } ReturnRec;                    // 退换货记录
 
