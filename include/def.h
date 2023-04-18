@@ -18,10 +18,15 @@
 #define ADDR(x) &x
 #define READFILE(path, list_pointer, Type, error)                   \
     {                                                               \
-        Type Typetype;                                              \
-        TEST(ReadFile(path, list_pointer, ADDR(Typetype)), error)   \
+        Type type;                                              \
+        TEST(ReadFile(path, list_pointer, ADDR(type)), error)   \
     }                                                               \
 
+#define WRITEFILE(path, list_pointer, Type, error)                  \
+    {                                                               \
+        Type type;                                              \
+        TEST(WriteFile(path, list_pointer, ADDR(type)), error)  \
+    }                                                               \
 
 extern List list_customer;
 extern List list_goods;

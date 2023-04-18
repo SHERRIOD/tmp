@@ -2,6 +2,7 @@
 #include "list.h"
 #include "def.h"
 
+// 从文件中加载数据到程序
 int
 LoadFromFile(){
     // WHERE("LoadFromFile");
@@ -17,6 +18,23 @@ LoadFromFile(){
 
 }
 
+// 将程序中的数据写入文件
+int
+WriteToFile()
+{
+    // WHERE("WriteToFile"); 
+
+    WRITEFILE("user.txt", &list_users, User, "用户数据写入失败");
+    WRITEFILE("customer.txt", &list_customer, Customer, "客户数据写入失败");
+    WRITEFILE("goods.txt", &list_goods, Goods, "商品信息写入失败");
+    WRITEFILE("inventory.txt", &list_inventory, Inventory, "库存信息写入失败");
+    WRITEFILE("return_rec.txt", &list_return_rec, ReturnRec, "退换货信息写入失败");
+    WRITEFILE("sales_rec.txt", &list_sales_rec, SalesRec, "销售信息写入失败"); 
+
+    return 0;
+}
+
+// 内部函数：实现读取文件数据到链表
 void
 __ReadFile(FILE* fp, List* list, void* list_type_value)
 {
@@ -31,6 +49,7 @@ ReadFile(const char* file_path, List* list, void* list_type_value)
 {
     const char* mode[] = {"r", "a"};
     static int option_read_file = 0;
+
     FILE* fp = fopen(file_path, mode[option_read_file]);
     if(fp == NULL){
         option_read_file = 1;
@@ -46,7 +65,7 @@ ReadFile(const char* file_path, List* list, void* list_type_value)
 
     return 0;
 }
-
+ // 内部函数：实现从链表读取数据写入到文件
 void
 __WriteFile(FILE* fp, List* list, void* list_type_value)
 {
@@ -56,16 +75,11 @@ __WriteFile(FILE* fp, List* list, void* list_type_value)
     }
 }
 
+// 读取链表中的数据并写入文件
 int
 WriteFile(const char* file_path,  List* list, void* list_type_value)
 {
-    const char* mode[] = {"r", "a"};
-    static int option_write_file = 0;
-    FILE* fp = fopen(file_path, mode[option_write_file]);
-    if(fp == NULL){
-        option_write_file = 1;
-        fp = fopen(file_path, mode[option_write_file]);
-    }
+    FILE* fp = fopen(file_path, "w");
     if(fp == NULL){
         TEST(-1, "无法写入文件，请您重启系统再尝试");
     }
@@ -73,6 +87,7 @@ WriteFile(const char* file_path,  List* list, void* list_type_value)
     __WriteFile(fp, list, list_type_value);
 
     fclose(fp);
+
     return 0;
 }
 
